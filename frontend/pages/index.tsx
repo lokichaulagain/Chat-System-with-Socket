@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 
-const Home = () => {
-  // const navigate = useNavigate();
-  const [userName, setUserName] = useState('');
+const Home = ({ socket }: any) => {
+  const router = useRouter();
 
-  const handleSubmit = (e) => {
+  const [userName, setUserName] = useState("");
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    localStorage.setItem('userName', userName);
-    // navigate('/chat');
+    localStorage.setItem("userName", userName);
+    //sends the username and socket ID to the Node.js server
+    socket.emit("newUser", { userName, socketID: socket.id });
+    router.push("/chat");
+
+    //Fetching active users from socket.io
+    //create an event that listens to users when they sign in.
   };
   return (
     <form className="home__container" onSubmit={handleSubmit}>
