@@ -4,10 +4,24 @@ require("dotenv").config();
 const { Server } = require("socket.io");
 const http = require("http").Server(app);
 const cors = require("cors");
+const mongoose = require ("mongoose")
+const Message =require ("./model/Message")
 const { createSocket } = require("dgram");
 const port = process.env.PORT || 8080;
 
 app.use(cors());
+
+//DbConnection
+mongoose
+  .connect(process.env.MONGO_DB_URI, {
+    autoIndex: true,
+  })
+  .then(() => {
+    console.log("MongoDb connected successfully !");
+  })
+  .catch((error) => {
+    console.log("MondoDb Disconnected !!!", error);
+  });
 
 //socket server initialization at port 5000
 const io = new Server(
@@ -31,6 +45,16 @@ io.on("connection", (socket) => {
   socket.on("message", (data) => {
     console.log(data);
     io.emit("messageResponse", data);
+  });
+
+  app.post("localhost:4000/api/message", async (req, res) => {
+    try {
+      const newMsg = new Message(req.body);
+      const savedMsg = await newMsg.save();
+      res.status(200).json(savedMsg);
+    } catch (error) {
+      console.log(error);
+    }
   });
 
   //listening the typing response
