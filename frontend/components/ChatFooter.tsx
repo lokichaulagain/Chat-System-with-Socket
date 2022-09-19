@@ -20,6 +20,14 @@ const ChatFooter = ({ socket }: any) => {
     setMessage("");
   };
 
+  //Notify others when a user is typing
+  //we'll use the JavaScript onKeyDown event listener on the input field, which triggers a function that sends a message to Socket.io
+
+  const handleTyping = () => {
+    socket.emit("typing",`${localStorage.getItem("userName")} is typing`)
+
+  };
+
   return (
     <div className="chat__footer">
       <form className="form" onSubmit={handleSendMessage}>
@@ -29,6 +37,8 @@ const ChatFooter = ({ socket }: any) => {
           className="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          //typing notify
+          onKeyDown={handleTyping}
         />
         <button type="submit" className="sendBtn">
           SEND

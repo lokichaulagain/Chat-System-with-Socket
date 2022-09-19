@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-const ChatBody = ({ messages, lastMessageRef }: any) => {
+const ChatBody = ({ messages, lastMessageRef, typingStatus }: any) => {
   const router = useRouter();
 
   const handleLeaveChat = () => {
@@ -42,17 +42,9 @@ const ChatBody = ({ messages, lastMessageRef }: any) => {
           )
         )}
 
-        {/*This shows messages received by you*/}
-        {/* <div className="message__chats">
-          <p>Other</p>
-          <div className="message__recipient">
-            <p>Hey, I am good, you?</p>
-          </div>
-        </div> */}
-
         {/*This is triggered when a user is typing*/}
         <div className="message__status">
-          <p>Someone is typing...</p>
+          <p>{typingStatus}</p>
         </div>
       </div>
     </>

@@ -33,6 +33,11 @@ io.on("connection", (socket) => {
     io.emit("messageResponse", data);
   });
 
+  //listening the typing response
+  socket.on("typing", (data) => {
+    socket.broadcast.emit("typingResponse", data);
+  });
+
   //Listens when the new user joins the server
   socket.on("newUser", (data) => {
     //Adds the new user to the list of users
