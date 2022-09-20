@@ -2,8 +2,11 @@ import React from "react";
 import { FiGithub } from "react-icons/fi";
 import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineGoogle } from "react-icons/ai";
+import { useRouter } from "next/router";
 
-function register() {
+function Register() {
+  const router = useRouter();
+
   return (
     <div className="custom-bg-primary p-5 h100vh ">
       <div className="row ">
@@ -101,7 +104,12 @@ function register() {
 
             <p className="mt-3 d-flex justify-content-center ">
               Already have an account ?
-              <span className="custom-primary-color cp fw-semibold">Login</span>
+              <span
+                className="custom-primary-color cp fw-semibold"
+                onClick={() => router.push("/login")}
+              >
+                Login
+              </span>
             </p>
 
             <p className="mt-5 d-flex justify-content-center text-muted ">
@@ -114,4 +122,4 @@ function register() {
   );
 }
 
-export default register;
+export default Register;

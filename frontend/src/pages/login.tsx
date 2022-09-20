@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import { GrFacebookOption } from "react-icons/gr";
-import { AiOutlineGoogle } from "react-icons/ai";
-import { AiFillEye } from "react-icons/ai";
-import { AiFillEyeInvisible } from "react-icons/ai";
+import { AiFillEye, AiFillEyeInvisible, AiOutlineGoogle } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 function Login() {
+  const router = useRouter();
   const [passwordType, setPasswordType] = useState("password");
   const [passwordInput, setPasswordInput] = useState("");
   const handlePasswordChange = (e: any) => {
@@ -122,8 +122,13 @@ function Login() {
             </div>
 
             <p className="mt-3 d-flex justify-content-center ">
-              Already have an account ?
-              <span className="custom-primary-color cp fw-semibold">Login</span>
+              Dont have an account ?
+              <span
+                className="custom-primary-color cp fw-semibold"
+                onClick={() => router.push("/register")}
+              >
+                Register
+              </span>
             </p>
 
             <p className="mt-5 d-flex justify-content-center text-muted ">
