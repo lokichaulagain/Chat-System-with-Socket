@@ -10,10 +10,7 @@ import { FiMoreVertical } from "react-icons/fi";
 const ProfileComponent = () => {
   return (
     <div>
-      <div className="d-flex  my-2 align-items-center justify-content-between  ">
-        <h5 className="">Profile</h5>
-        <FiMoreVertical className="cp" />
-      </div>
+      ChatsComponent
       <div className="card border-0">
         <Image src={profile} className="card-img-top" alt="" />
         <div className="card-body">
