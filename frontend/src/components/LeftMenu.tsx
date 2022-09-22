@@ -5,6 +5,8 @@ import { BsChatSquareText } from "react-icons/bs";
 import { FiPhoneOutgoing } from "react-icons/fi";
 import { AiOutlineSetting } from "react-icons/ai";
 import { BsMoon } from "react-icons/bs";
+import { BsPeopleFill } from "react-icons/bs";
+
 import { useRouter } from "next/router";
 
 const LeftMenu = () => {
@@ -28,6 +30,11 @@ const LeftMenu = () => {
         <AiOutlineSetting
           className="menuIcon"
           onClick={() => router.push("/settings")}
+        />
+
+        <BsPeopleFill
+          className="menuIcon"
+          onClick={() => router.push("/peoples")}
         />
       </div>
 
