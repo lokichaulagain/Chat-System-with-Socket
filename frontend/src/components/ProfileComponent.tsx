@@ -9,15 +9,23 @@ import { FiMoreVertical } from "react-icons/fi";
 
 const ProfileComponent = () => {
   return (
-    <div>
-      ChatsComponent
+    <>
+
+      <div className="d-flex  my-2 align-items-center justify-content-between  ">
+        <h5 className="">Profile</h5>
+        <FiMoreVertical className="cp" />
+      </div>
+    
+  
+
+
       <div className="card border-0">
         <Image src={profile} className="card-img-top" alt="" />
         <div className="card-body">
-          <h5 className="card-title">Lokendra Chaulagain</h5>
-          <p className="card-text">MERN Stack Developer</p>
+          <h5 className="mb-0">Lokendra Chaulagain</h5>
+          <small className="fw-semibold text-muted">MERN Stack Developer</small>
 
-          <div className="row gap-3">
+          <div className="row gap-3 mt-3">
             <button className=" col btn btn-primary btn-sm" type="button">
               Follow
             </button>
@@ -32,37 +40,53 @@ const ProfileComponent = () => {
 
           <div className="row">
             <div className="col">
-              <h5>Following</h5>
-              <h5>64</h5>
+              <h6>Following</h6>
+              <h6>64</h6>
             </div>
             <div className="col">
-              <h5>Followers</h5>
-              <h5>64</h5>
+              <h6>Followers</h6>
+              <h6>64</h6>
             </div>
           </div>
 
-          <p className="card-text">
+          <small className="card-text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Reprehenderit rem facere excepturi quisquam tempore quidem.
-          </p>
+          </small>
 
           <div className="text-success">
             <hr />
           </div>
 
           <div className="row gap-3">
-            <div className="col-1 d-flex flex-column gap-3">
-              <BiUser size={25} />
-              <HiOutlineMail size={25} />
-              <GoLocation size={25} />
-              <RiSuitcaseLine size={25} />
+            <div className="d-flex align-items-center gap-2" >
+            <BiUser size={22} />
+            <p className="mb-0 ">Lokendra Chaulagain </p>
             </div>
-            <div className="col d-flex flex-column gap-3">
-              <p className="mb-0">Lokendra </p>
-              <p className="mb-0">lokendra@gmail.com </p>
-              <p className="mb-0">Kathmandu Nepal </p>
-              <p className="mb-0">FalconTech IT </p>
+
+            <div className="d-flex align-items-center gap-2" >
+            <HiOutlineMail size={22} />
+            <p className="mb-0">lokendra@gmail.com </p>
             </div>
+
+
+            <div className="d-flex align-items-center gap-2" >
+            <GoLocation size={22} />
+            <p className="mb-0">Kathmandu Nepal </p>
+            </div>
+
+
+            <div className="d-flex align-items-center gap-2" >
+            <RiSuitcaseLine size={22} />
+            <p className="mb-0">FalconTech IT </p>
+            </div>
+
+
+
+
+
+
+           
           </div>
 
           <div className="text-success">
@@ -70,7 +94,7 @@ const ProfileComponent = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,8 +1,11 @@
 import React from 'react'
+import CallsComponent from '../components/CallsComponent'
 
 function calls() {
   return (
-    <div>calls</div>
+    <div>
+      <CallsComponent/>
+    </div>
   )
 }
 
