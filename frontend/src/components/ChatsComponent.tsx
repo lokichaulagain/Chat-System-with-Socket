@@ -24,6 +24,7 @@ const ChatsComponent = () => {
 
       <h6 className="mt-5 ">Recent Chats</h6>
 
+
       <div className="d-flex align-items-center justify-content-between mt-3">
         <div className="d-flex align-items-center gap-2  ">
           <div>
