@@ -297,7 +297,7 @@ a:hover {
 .chatBg {
   background-image: linear-gradient(rgba(15, 23, 54, 0.7), rgba(4, 9, 30, 0.7)),
     url("../../public/chatbg.jpg");
-    
+
   /* width: 100%; */
   background-size: cover;
   background-position: center;
@@ -534,4 +534,26 @@ input[type="checkbox"] {
 
 .cp {
   cursor: pointer;
+}
+
+
+/* scrolbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2e2f2f;
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #204863;
 }
