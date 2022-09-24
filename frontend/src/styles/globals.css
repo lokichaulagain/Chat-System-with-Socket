@@ -550,7 +550,7 @@ input[type="checkbox"] {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #2e2f2f;
-  
+
 }
 
 /* Handle on hover */
@@ -562,6 +562,33 @@ input[type="checkbox"] {
 
 
 
-.primaryTxtColor{
+.primaryTxtColor {
   color: #495057;
+}
+
+.primaryColorHover:hover {
+  color: var(--color-primary);
+}
+
+
+
+
+
+
+
+.recipient {
+  background-color: rgb(218, 125, 125);
+}
+
+.sender {
+  background-color: rgb(151, 194, 151);
+}
+
+.text-whiteSmoke {
+  color: whitesmoke;
+}
+
+.text-color {
+  color: rgb(20, 19, 19);
+
 }

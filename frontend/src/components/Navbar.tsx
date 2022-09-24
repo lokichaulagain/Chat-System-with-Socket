@@ -22,8 +22,8 @@ const Navbar = () => {
           />
         </div>
         <div className="">
-          <h5 className="mb-0 cp primaryTxtColor ">Lokendra Chaulagain</h5>
-          <small className="text-muted fw-semibold"> Active</small>
+          <h5 className="mb-0 cp primaryTxtColor primaryColorHover ">Lokendra Chaulagain</h5>
+          <small className="text-muted fw-semibold"> Active now  || Active 5min ago</small>
         </div>
       </div>
       <div className="col d-flex align-items-center justify-content-end gap-4 text-muted">
@@ -32,10 +32,10 @@ const Navbar = () => {
           id="exampleFormControlInput1"
           placeholder="Search conversation"
         />
-        <FiPhoneCall size={20} className="cp" />
-        <HiOutlineVideoCamera size={22} className="cp" />
-        <BsInfoCircleFill size={20} className="cp" />
-        <FiMoreVertical size={22} className="cp" />
+        <FiPhoneCall size={20} className="cp primaryColorHover" />
+        <HiOutlineVideoCamera size={22} className="cp primaryColorHover" />
+        <BsInfoCircleFill size={20} className="cp primaryColorHover" />
+        <FiMoreVertical size={22} className="cp primaryColorHover" />
       </div>
     </div>
   );

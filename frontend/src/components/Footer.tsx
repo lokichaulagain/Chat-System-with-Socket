@@ -11,15 +11,15 @@ const Footer = () => {
       style={{ backgroundColor: "#f3f2f2" }}
     >
       <div className="col d-flex align-items-center gap-4 text-muted">
-        <FiMoreHorizontal size={24} className="cp" />
-        <BsEmojiSmile size={20} className="cp" />
+        <FiMoreHorizontal size={24} className="cp primaryColorHover" />
+        <BsEmojiSmile size={20} className="cp primaryColorHover" />
         <input
           className="form-control p-2"
           id="exampleFormControlInput1"
           placeholder="Type message..."
         />
-        <FiMic size={22} className="cp" />
-        <IoSendSharp size={22} className="cp" />
+        <FiMic size={22} className="cp primaryColorHover" />
+        <IoSendSharp size={22} className="cp primaryColorHover" />
       </div>
     </div>
   );
