@@ -19,19 +19,20 @@ function Login() {
     setPasswordType("password");
   };
 
+
+
+  const handleLogin=()=>{
+    router.push("/chats")
+  }
+
   return (
     <div className="custom-bg-primary p-5 h100vh ">
       <div className="row ">
         <div className="col-3">
           <h5>Chat App</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, vel!
-          </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, vel!</p>
         </div>
-        <div
-          className="col-9 custom-bg-card-white rounded-3 pt-5 px-5  d-flex justify-content-center"
-          style={{ height: "90vh" }}
-        >
+        <div className="col-9 custom-bg-card-white rounded-3 pt-5 px-5  d-flex justify-content-center" style={{ height: "90vh" }}>
           <form action="" className="col-5">
             <div className="d-flex flex-column align-items-center justify-content-center">
               <h3>Welcome Back !</h3>
@@ -41,61 +42,31 @@ function Login() {
               <label htmlFor="email" className="form-label mb-1">
                 Email
               </label>
-              <input
-                type="email"
-                className="form-control rounded-1 "
-                id="email"
-                placeholder="Enter Email"
-                autoComplete="off"
-              />
+              <input type="email" className="form-control rounded-1 " id="email" placeholder="Enter Email" autoComplete="off" />
             </div>
 
             <div className="mt-3">
-              <label
-                htmlFor="password"
-                className="form-label mb-1 d-flex align-items-center justify-content-between"
-              >
+              <label htmlFor="password" className="form-label mb-1 d-flex align-items-center justify-content-between">
                 Password
                 <span className="cp text-muted">Forgot password ?</span>
               </label>
               <div className="input-group">
-                <input
-                  type={passwordType}
-                  onChange={handlePasswordChange}
-                  value={passwordInput}
-                  name="password"
-                  className="form-control rounded-1 "
-                  id="password"
-                  placeholder="Enter Password"
-                />
-                <button
-                  className="btn btn-outline-secondary"
-                  type="button"
-                  id="button-addon2"
-                >
-                  {passwordType === "password" ? (
-                    <AiFillEye onClick={togglePassword} />
-                  ) : (
-                    <AiFillEyeInvisible onClick={togglePassword} />
-                  )}
+                <input type={passwordType} onChange={handlePasswordChange} value={passwordInput} name="password" className="form-control rounded-1 " id="password" placeholder="Enter Password" />
+                <button className="btn btn-outline-secondary" type="button" id="button-addon2">
+                  {passwordType === "password" ? <AiFillEye onClick={togglePassword} /> : <AiFillEyeInvisible onClick={togglePassword} />}
                 </button>
               </div>
             </div>
 
             <div className="form-check mt-3 gap-2 d-inline-flex">
-              <input
-                className="form-check-input cp"
-                type="checkbox"
-                value=""
-                id="checkBox"
-              />
+              <input className="form-check-input cp" type="checkbox" value="" id="checkBox" />
               <label className="form-check-label cp" htmlFor="checkBox">
                 Remember me
               </label>
             </div>
 
             <div className="mt-4 ">
-              <button type="button" className="w-100 btn btn-primary">
+              <button type="button" className="w-100 btn btn-primary" onClick={handleLogin}>
                 Login
               </button>
             </div>
@@ -123,17 +94,12 @@ function Login() {
 
             <p className="mt-3 d-flex justify-content-center ">
               Dont have an account ?
-              <span
-                className="custom-primary-color cp fw-semibold"
-                onClick={() => router.push("/register")}
-              >
+              <span className="custom-primary-color cp fw-semibold" onClick={() => router.push("/register")}>
                 Register
               </span>
             </p>
 
-            <p className="mt-5 d-flex justify-content-center text-muted ">
-              © 2022 Doot. Crafted by Lokendra Chaulagain all right reserved
-            </p>
+            <p className="mt-5 d-flex justify-content-center text-muted ">© 2022 Doot. Crafted by Lokendra Chaulagain all right reserved</p>
           </form>
         </div>
       </div>

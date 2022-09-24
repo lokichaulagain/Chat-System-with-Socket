@@ -14,11 +14,10 @@ const SettingsComponent = () => {
       <div className="card border-0">
         <Image src={profile} className="card-img-top" alt="" />
         <div className="mt-3">
-         <div className="d-flex flex-column align-items-center ">
-         <h5 className="mb-0">Lokendra Chaulagain</h5>
-          <small className="fw-semibold text-muted">MERN Stack Developer</small>
-
-         </div>
+          <div className="d-flex flex-column align-items-center ">
+            <h5 className="mb-0">Lokendra Chaulagain</h5>
+            <small className="fw-semibold text-muted">MERN Stack Developer</small>
+          </div>
           <div className="text-success">
             <hr />
           </div>
@@ -30,7 +29,7 @@ const SettingsComponent = () => {
             </div>
             <div className="d-flex flex-column align-items-center">
               <h6>Followers</h6>
-              <h6 >64</h6>
+              <h6>64</h6>
             </div>
           </div>
 
@@ -40,119 +39,77 @@ const SettingsComponent = () => {
         </div>
       </div>
 
-
-
-
-
-
       <h6 className="mt-2">Following</h6>
 
-<div className="d-flex align-items-center justify-content-between mt-3">
-  <div className="d-flex align-items-center gap-2  ">
-    <div>
-      <Image
-        src={profile}
-        width={35}
-        height={35}
-        objectFit="cover"
-        className="rounded-circle cp"
-        alt=""
-      />
-    </div>
+      <div className="d-flex align-items-center justify-content-between mt-3">
+        <div className="d-flex align-items-center gap-2  ">
+          <div>
+            <Image src={profile} width={35} height={35} objectFit="cover" className="rounded-circle cp" alt="" />
+          </div>
 
-    <div className="lh-sm">
-      <small className="fw-semibold d-flex align-items-center gap-2 cp">
-        Lokendra Chaulagain{" "}
-        <div
-          className="rounded-pill cp"
-          style={{
-            height: "8px",
-            width: "8px",
-            backgroundColor: "green",
-          }}
-        ></div>{" "}
-      </small>
-      <div>
-        <small
-          style={{ fontSize: "12px" }}
-          className="fw-semibold text-muted"
-        >
-         Mern Stack Developer
-        </small>
+          <div className="lh-sm">
+            <small className="fw-semibold d-flex align-items-center gap-2 cp">
+              Lokendra Chaulagain{" "}
+              <div
+                className="rounded-pill cp"
+                style={{
+                  height: "8px",
+                  width: "8px",
+                  backgroundColor: "green",
+                }}
+              ></div>{" "}
+            </small>
+            <div>
+              <small style={{ fontSize: "12px" }} className="fw-semibold text-muted">
+                Mern Stack Developer
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <div className="d-flex align-items-center gap-3">
+          <div className=" d-flex gap-2">
+            <FiPhoneCall className="cp" />
+            <HiOutlineVideoCamera className="cp" />
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div className="d-flex align-items-center gap-3">
-    <div className=" d-flex gap-2">
-      <FiPhoneCall className="cp" />
-      <HiOutlineVideoCamera className="cp" />
-    </div>
-  </div>
-</div>
+      <h6 className="mt-5">Followers</h6>
 
+      <div className="d-flex align-items-center justify-content-between mt-3">
+        <div className="d-flex align-items-center gap-2  ">
+          <div>
+            <Image src={profile} width={35} height={35} objectFit="cover" className="rounded-circle cp" alt="" />
+          </div>
 
+          <div className="lh-sm">
+            <small className="fw-semibold d-flex align-items-center gap-2 cp">
+              Lokendra Chaulagain{" "}
+              <div
+                className="rounded-pill cp"
+                style={{
+                  height: "8px",
+                  width: "8px",
+                  backgroundColor: "green",
+                }}
+              ></div>{" "}
+            </small>
+            <div>
+              <small style={{ fontSize: "12px" }} className="fw-semibold text-muted">
+                Mern Stack Developer
+              </small>
+            </div>
+          </div>
+        </div>
 
-
-
-
-
-
-
-<h6 className="mt-5">Followers</h6>
-
-<div className="d-flex align-items-center justify-content-between mt-3">
-  <div className="d-flex align-items-center gap-2  ">
-    <div>
-      <Image
-        src={profile}
-        width={35}
-        height={35}
-        objectFit="cover"
-        className="rounded-circle cp"
-        alt=""
-      />
-    </div>
-
-    <div className="lh-sm">
-      <small className="fw-semibold d-flex align-items-center gap-2 cp">
-        Lokendra Chaulagain{" "}
-        <div
-          className="rounded-pill cp"
-          style={{
-            height: "8px",
-            width: "8px",
-            backgroundColor: "green",
-          }}
-        ></div>{" "}
-      </small>
-      <div>
-        <small
-          style={{ fontSize: "12px" }}
-          className="fw-semibold text-muted"
-        >
-           Mern Stack Developer
-        </small>
+        <div className="d-flex align-items-center gap-3">
+          <div className=" d-flex gap-2">
+            <FiPhoneCall className="cp" />
+            <HiOutlineVideoCamera className="cp" />
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div className="d-flex align-items-center gap-3">
-    <div className=" d-flex gap-2">
-      <FiPhoneCall className="cp" />
-      <HiOutlineVideoCamera className="cp" />
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
     </div>
   );
 };

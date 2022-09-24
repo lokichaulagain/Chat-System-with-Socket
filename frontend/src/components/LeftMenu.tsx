@@ -1,12 +1,8 @@
 import React from "react";
-import { FiLogOut } from "react-icons/fi";
 import { BiUserCircle } from "react-icons/bi";
-import { BsChatSquareText } from "react-icons/bs";
-import { FiPhoneOutgoing } from "react-icons/fi";
+import { BsChatSquareText, BsPeopleFill, BsMoon } from "react-icons/bs";
+import { FiPhoneOutgoing, FiLogOut } from "react-icons/fi";
 import { AiOutlineSetting } from "react-icons/ai";
-import { BsMoon } from "react-icons/bs";
-import { BsPeopleFill } from "react-icons/bs";
-
 import { useRouter } from "next/router";
 
 const LeftMenu = () => {
@@ -15,27 +11,11 @@ const LeftMenu = () => {
   return (
     <div className="row d-flex flex-column justify-content-between align-items-center py-4 custom-nav-dark-color ">
       <div className="col-8 d-flex flex-column gap-5 ">
-        <BsChatSquareText
-          className="menuIcon"
-          onClick={() => router.push("/chats")}
-        />
-        <BiUserCircle
-          className="menuIcon"
-          onClick={() => router.push("/profile")}
-        />
-        <FiPhoneOutgoing
-          className="menuIcon"
-          onClick={() => router.push("/calls")}
-        />
-        <AiOutlineSetting
-          className="menuIcon"
-          onClick={() => router.push("/settings")}
-        />
-
-        <BsPeopleFill
-          className="menuIcon"
-          onClick={() => router.push("/peoples")}
-        />
+        <BsChatSquareText className="menuIcon" onClick={() => router.push("/chats")} />
+        <BiUserCircle className="menuIcon " type="button" onClick={() => router.push("/profile")} />
+        <FiPhoneOutgoing className="menuIcon" type="button" onClick={() => router.push("/calls")} />
+        <AiOutlineSetting className="menuIcon" type="button" onClick={() => router.push("/settings")} />
+        <BsPeopleFill className="menuIcon" type="button" onClick={() => router.push("/peoples")} />
       </div>
 
       <div className="col-8 d-flex flex-column gap-5 ">

@@ -12,26 +12,14 @@ const PeoplesComponent = () => {
         <FiMoreVertical className="cp" />
       </div>
 
-      <input
-        type="text"
-        className="form-control"
-        id="searchInput"
-        placeholder="Search user..."
-      />
+      <input type="text" className="form-control" id="searchInput" placeholder="Search user..." />
 
       <h6 className="mt-5 ">Favorites</h6>
 
       <div className="d-flex align-items-center justify-content-between mt-3">
         <div className="d-flex align-items-center gap-2  ">
           <div>
-            <Image
-              src={profile}
-              width={35}
-              height={35}
-              objectFit="cover"
-              className="rounded-circle cp"
-              alt=""
-            />
+            <Image src={profile} width={35} height={35} objectFit="cover" className="rounded-circle cp" alt="" />
           </div>
 
           <div className="lh-sm">
@@ -47,10 +35,7 @@ const PeoplesComponent = () => {
               ></div>{" "}
             </small>
             <div>
-              <small
-                style={{ fontSize: "12px" }}
-                className="fw-semibold text-muted"
-              >
+              <small style={{ fontSize: "12px" }} className="fw-semibold text-muted">
                 Last seen 6:30AM
               </small>
             </div>
@@ -58,10 +43,7 @@ const PeoplesComponent = () => {
         </div>
 
         <div className="d-flex align-items-center gap-3">
-          <small
-            style={{ fontSize: "12px" }}
-            className="fw-semibold  lh-sm text-muted  "
-          >
+          <small style={{ fontSize: "12px" }} className="fw-semibold  lh-sm text-muted  ">
             4
           </small>
           <div className=" d-flex gap-2">
@@ -74,14 +56,7 @@ const PeoplesComponent = () => {
       <div className="d-flex align-items-center justify-content-between mt-3">
         <div className="d-flex align-items-center gap-2  ">
           <div>
-            <Image
-              src={profile}
-              width={35}
-              height={35}
-              objectFit="cover"
-              className="rounded-circle cp"
-              alt=""
-            />
+            <Image src={profile} width={35} height={35} objectFit="cover" className="rounded-circle cp" alt="" />
           </div>
 
           <div className="lh-sm">
@@ -97,10 +72,7 @@ const PeoplesComponent = () => {
               ></div>{" "}
             </small>
             <div>
-              <small
-                style={{ fontSize: "12px" }}
-                className="fw-semibold text-muted"
-              >
+              <small style={{ fontSize: "12px" }} className="fw-semibold text-muted">
                 Last seen 6:30AM
               </small>
             </div>
@@ -108,10 +80,7 @@ const PeoplesComponent = () => {
         </div>
 
         <div className="d-flex align-items-center gap-3">
-          <small
-            style={{ fontSize: "12px" }}
-            className="fw-semibold  lh-sm text-muted  "
-          >
+          <small style={{ fontSize: "12px" }} className="fw-semibold  lh-sm text-muted  ">
             4
           </small>
           <div className=" d-flex gap-2">
@@ -126,14 +95,7 @@ const PeoplesComponent = () => {
       <div className="d-flex align-items-center justify-content-between mt-3">
         <div className="d-flex align-items-center gap-2  ">
           <div>
-            <Image
-              src={profile}
-              width={35}
-              height={35}
-              objectFit="cover"
-              className="rounded-circle cp"
-              alt=""
-            />
+            <Image src={profile} width={35} height={35} objectFit="cover" className="rounded-circle cp" alt="" />
           </div>
 
           <div className="lh-sm">
@@ -149,10 +111,7 @@ const PeoplesComponent = () => {
               ></div>{" "}
             </small>
             <div>
-              <small
-                style={{ fontSize: "12px" }}
-                className="fw-semibold text-muted"
-              >
+              <small style={{ fontSize: "12px" }} className="fw-semibold text-muted">
                 Joined on 27 july 2022
               </small>
             </div>
@@ -167,33 +126,10 @@ const PeoplesComponent = () => {
         </div>
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
       <div className="d-flex align-items-center justify-content-between mt-3">
         <div className="d-flex align-items-center gap-2  ">
           <div>
-            <Image
-              src={profile}
-              width={35}
-              height={35}
-              objectFit="cover"
-              className="rounded-circle cp"
-              alt=""
-            />
+            <Image src={profile} width={35} height={35} objectFit="cover" className="rounded-circle cp" alt="" />
           </div>
 
           <div className="lh-sm">
@@ -209,10 +145,7 @@ const PeoplesComponent = () => {
               ></div>{" "}
             </small>
             <div>
-              <small
-                style={{ fontSize: "12px" }}
-                className="fw-semibold text-muted"
-              >
+              <small style={{ fontSize: "12px" }} className="fw-semibold text-muted">
                 Joined on 27 july 2022
               </small>
             </div>
@@ -237,9 +170,7 @@ const PeoplesComponent = () => {
           <small className="fw-semibold cp">
             # <span>Web Design</span>
           </small>
-          <small className="text-muted cp">
-            Discussion about design pattern and architecture and modification learning
-          </small>
+          <small className="text-muted cp">Discussion about design pattern and architecture and modification learning</small>
         </div>
         <small className="fw-semibold text-muted  cp text-end">37</small>
       </div>
@@ -249,9 +180,7 @@ const PeoplesComponent = () => {
           <small className="fw-semibold cp">
             # <span>Web Design</span>
           </small>
-          <small className="text-muted cp">
-            Discussion about design pattern and architecture and modification learning
-          </small>
+          <small className="text-muted cp">Discussion about design pattern and architecture and modification learning</small>
         </div>
         <small className="fw-semibold text-muted  cp text-end">37</small>
       </div>
@@ -260,9 +189,7 @@ const PeoplesComponent = () => {
           <small className="fw-semibold cp">
             # <span>Web Design</span>
           </small>
-          <small className="text-muted cp">
-            Discussion about design pattern and architecture and modification learning
-          </small>
+          <small className="text-muted cp">Discussion about design pattern and architecture and modification learning</small>
         </div>
         <small className="fw-semibold text-muted  cp text-end">37</small>
       </div>

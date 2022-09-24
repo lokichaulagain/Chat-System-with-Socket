@@ -43,11 +43,12 @@
 import React from "react";
 import ChatsComponent from "../components/ChatsComponent";
 
-
 function Chats() {
-  return <div>
-    <ChatsComponent/>
-  </div>;
+  return (
+    <div>
+      <ChatsComponent />
+    </div>
+  );
 }
 
 export default Chats;

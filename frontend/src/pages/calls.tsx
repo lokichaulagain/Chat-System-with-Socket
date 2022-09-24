@@ -1,12 +1,12 @@
-import React from 'react'
-import CallsComponent from '../components/CallsComponent'
+import React from "react";
+import CallsComponent from "../components/CallsComponent";
 
 function calls() {
   return (
     <div>
-      <CallsComponent/>
+      <CallsComponent />
     </div>
-  )
+  );
 }
 
-export default calls
+export default calls;

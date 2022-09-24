@@ -27,33 +27,33 @@ const checkPageStatus = (message: any, userName: any) => {
   }
 
   //function to send notifications to all the users except the sender.
-  if(userName !== localStorage.getItem("userName")) {
-    if(!("Notification" in window)) {
-      alert("This browser does not support system notifications!")
-    } else if(Notification.permission === "granted") {
-      sendNotification(message, userName)
-    }else if(Notification.permission !== "denied") {
-       Notification.requestPermission((permission)=> {
-          if (permission === "granted") {
-            sendNotification(message, userName)
-          }
-       })
+  if (userName !== localStorage.getItem("userName")) {
+    if (!("Notification" in window)) {
+      alert("This browser does not support system notifications!");
+    } else if (Notification.permission === "granted") {
+      sendNotification(message, userName);
+    } else if (Notification.permission !== "denied") {
+      Notification.requestPermission((permission) => {
+        if (permission === "granted") {
+          sendNotification(message, userName);
+        }
+      });
     }
-  }     
-
+  }
 
   //How to detect if a user is viewing your web page
-  document.onvisibilitychange = ()=> {
-    if(document.hidden) {
+  document.onvisibilitychange = () => {
+    if (document.hidden) {
       const notification = new Notification("New message from Open Chat", {
         icon: "https://cdn-icons-png.flaticon.com/512/733/733585.png",
-        body: `@${userName}: ${message}`
-      })
-      notification.onclick = ()=> function() {
-        window.open("http://localhost:3000/chat")
-      }
+        body: `@${userName}: ${message}`,
+      });
+      notification.onclick = () =>
+        function () {
+          window.open("http://localhost:3000/chat");
+        };
     }
-  }  
+  };
 
   return { message, userName };
 };

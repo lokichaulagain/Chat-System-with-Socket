@@ -35,24 +35,47 @@ function MyApp({ Component, pageProps }: AppProps) {
   console.log(location);
 
   return (
-    // <div style={{height:"100vh" ,overflow:"hidden"}}>
-    //   <Component {...pageProps} socket={socket} />;
+    <>
+      {location == "login" ? (
+        <div style={{ height: "100vh", overflow: "hidden" }}>
+          <Component {...pageProps} socket={socket} />;
+        </div>
+      ) : location == "register" ? (
+        <div style={{ height: "100vh", overflow: "hidden" }}>
+          <Component {...pageProps} socket={socket} />;
+        </div>
+      ) : (
+        <div className="row m-0">
+          <div className="col-1">
+            <LeftMenu />
+          </div>
+          <div className="col-2" style={{ height: "100vh", overflowY: "scroll" }}>
+            <Component {...pageProps} socket={socket} />
+          </div>
+
+          <div className="col-9 " style={{ height: "100vh", overflowY: "scroll" }}>
+            <Navbar />
+            <ChatBody />
+            <Footer />
+          </div>
+        </div>
+      )}
+    </>
+
+    // <div className="row m-0">
+    //   <div className="col-1">
+    //     <LeftMenu />
+    //   </div>
+    //   <div className="col-2" style={{ height: "100vh", overflowY: "scroll" }}>
+    //     <Component {...pageProps} socket={socket} />
+    //   </div>
+
+    //   <div className="col-9 " style={{ height: "100vh", overflowY: "scroll" }}>
+    //     <Navbar />
+    //     <ChatBody/>
+    //     <Footer />
+    //   </div>
     // </div>
-
-    <div className="row m-0">
-      <div className="col-1">
-        <LeftMenu />
-      </div>
-      <div className="col-2" style={{ height: "100vh", overflowY: "scroll" }}>
-        <Component {...pageProps} socket={socket} />
-      </div>
-
-      <div className="col-9 " style={{ height: "100vh", overflowY: "scroll" }}>
-        <Navbar />
-        <ChatBody/>
-        <Footer />
-      </div>
-    </div>
   );
 }
 
