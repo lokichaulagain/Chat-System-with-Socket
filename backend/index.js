@@ -4,24 +4,9 @@ require("dotenv").config();
 const { Server } = require("socket.io");
 const http = require("http").Server(app);
 const cors = require("cors");
-const mongoose = require ("mongoose")
-const Message =require ("./model/Message")
-const { createSocket } = require("dgram");
+
 const port = process.env.PORT || 8080;
-
 app.use(cors());
-
-//DbConnection
-mongoose
-  .connect(process.env.MONGO_DB_URI, {
-    autoIndex: true,
-  })
-  .then(() => {
-    console.log("MongoDb connected successfully !");
-  })
-  .catch((error) => {
-    console.log("MondoDb Disconnected !!!", error);
-  });
 
 //socket server initialization at port 5000
 const io = new Server(
@@ -37,13 +22,12 @@ const io = new Server(
 //Create an event listener that updates an array of users on the Node.js server whenever a user joins or leaves the chat application.
 let users = [];
 
-//socket server connection check
 io.on("connection", (socket) => {
   console.log(`${socket.id} user just connected`);
-  //listen the message event from the React(frontend)
-  //We’ve been able to retrieve the message on the server; hence, let's send the message to all the connected clients.
+  //listen message from frontend
   socket.on("message", (data) => {
     console.log(data);
+    //sending msg to all connected users
     io.emit("messageResponse", data);
   });
 
@@ -81,12 +65,10 @@ io.on("connection", (socket) => {
   });
 });
 
-//express
 app.get("/", (req, res) => {
   res.status(200).json({ msg: "Server running properly" });
 });
 
-//port listening
 app.listen(port, () => {
   console.log(`Server running at port ${port}`);
 });

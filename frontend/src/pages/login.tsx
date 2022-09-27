@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import { GrFacebookOption } from "react-icons/gr";
 import { AiFillEye, AiFillEyeInvisible, AiOutlineGoogle } from "react-icons/ai";
@@ -19,11 +19,14 @@ function Login() {
     setPasswordType("password");
   };
 
+  const [userName, setUserName] = useState("");
+  useEffect(() => {}, []);
 
-
-  const handleLogin=()=>{
-    router.push("/chats")
-  }
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    localStorage.setItem("userName", userName);
+    router.push("/");
+  };
 
   return (
     <div className="custom-bg-primary p-5 h100vh ">
@@ -33,7 +36,7 @@ function Login() {
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, vel!</p>
         </div>
         <div className="col-9 custom-bg-card-white rounded-3 pt-5 px-5  d-flex justify-content-center" style={{ height: "90vh" }}>
-          <form action="" className="col-5">
+          <form action="" className="col-5" onSubmit={handleSubmit}>
             <div className="d-flex flex-column align-items-center justify-content-center">
               <h3>Welcome Back !</h3>
               <p>Sign in to continue to Doot.</p>
@@ -42,7 +45,7 @@ function Login() {
               <label htmlFor="email" className="form-label mb-1">
                 Email
               </label>
-              <input type="email" className="form-control rounded-1 " id="email" placeholder="Enter Email" autoComplete="off" />
+              <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} className="form-control rounded-1 " id="email" placeholder="Enter Email" autoComplete="off" />
             </div>
 
             <div className="mt-3">
@@ -66,7 +69,7 @@ function Login() {
             </div>
 
             <div className="mt-4 ">
-              <button type="button" className="w-100 btn btn-primary" onClick={handleLogin}>
+              <button type="submit" className="w-100 btn btn-primary">
                 Login
               </button>
             </div>
