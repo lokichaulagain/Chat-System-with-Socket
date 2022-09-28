@@ -19,9 +19,8 @@ const io = new Server(
   })
 );
 
-//Create an event listener that updates an array of users on the Node.js server whenever a user joins or leaves the chat application.
+//event that gets every active user
 let users = [];
-
 io.on("connection", (socket) => {
   console.log(`${socket.id} user just connected`);
   //listen message from frontend

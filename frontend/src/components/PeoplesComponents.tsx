@@ -4,7 +4,7 @@ import profile from "../../public/profile.jpg";
 import { FiMoreVertical, FiPhoneCall } from "react-icons/fi";
 import { HiOutlineVideoCamera } from "react-icons/hi";
 
-const PeoplesComponent = () => {
+const PeoplesComponent = ({ activeUsers }: any) => {
   return (
     <div>
       <div className="d-flex  my-2 align-items-center justify-content-between  ">
@@ -92,39 +92,41 @@ const PeoplesComponent = () => {
 
       <h6 className="mt-5">Active Users</h6>
 
-      <div className="d-flex align-items-center justify-content-between mt-3">
-        <div className="d-flex align-items-center gap-2  ">
-          <div>
-            <Image src={profile} width={35} height={35} objectFit="cover" className="rounded-circle cp" alt="" />
+      {activeUsers.map((activeUser: any) => (
+        <div key={activeUser.socketI} className="d-flex align-items-center justify-content-between mt-3">
+          <div className="d-flex align-items-center gap-2  ">
+            <div>
+              <Image src={profile} width={35} height={35} objectFit="cover" className="rounded-circle cp" alt="" />
+            </div>
+
+            <div className="lh-sm">
+              <small className="fw-semibold d-flex align-items-center gap-2 cp">
+                Lokendra Chaulagain{" "}
+                <div
+                  className="rounded-pill cp"
+                  style={{
+                    height: "8px",
+                    width: "8px",
+                    backgroundColor: "green",
+                  }}
+                ></div>{" "}
+              </small>
+              <div>
+                <small style={{ fontSize: "12px" }} className="fw-semibold text-muted">
+                  Joined on 27 july 2022
+                </small>
+              </div>
+            </div>
           </div>
 
-          <div className="lh-sm">
-            <small className="fw-semibold d-flex align-items-center gap-2 cp">
-              Lokendra Chaulagain{" "}
-              <div
-                className="rounded-pill cp"
-                style={{
-                  height: "8px",
-                  width: "8px",
-                  backgroundColor: "green",
-                }}
-              ></div>{" "}
-            </small>
-            <div>
-              <small style={{ fontSize: "12px" }} className="fw-semibold text-muted">
-                Joined on 27 july 2022
-              </small>
+          <div className="d-flex align-items-center gap-3">
+            <div className=" d-flex gap-2">
+              <FiPhoneCall className="cp" />
+              <HiOutlineVideoCamera className="cp" />
             </div>
           </div>
         </div>
-
-        <div className="d-flex align-items-center gap-3">
-          <div className=" d-flex gap-2">
-            <FiPhoneCall className="cp" />
-            <HiOutlineVideoCamera className="cp" />
-          </div>
-        </div>
-      </div>
+      ))}
 
       <div className="d-flex align-items-center justify-content-between mt-3">
         <div className="d-flex align-items-center gap-2  ">

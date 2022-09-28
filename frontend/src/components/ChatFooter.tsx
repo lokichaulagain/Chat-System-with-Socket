@@ -85,9 +85,6 @@ const ChatFooter = ({ socket }: any) => {
     setMessage("");
   };
 
-  //Notify others when a user is typing
-  //we'll use the JavaScript onKeyDown event listener on the input field, which triggers a function that sends a message to Socket.io
-
   const handleTyping = () => {
     socket.emit("typing", `${localStorage.getItem("userName")} is typing`);
   };

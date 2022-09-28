@@ -1,20 +1,24 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import profile from "../../public/profile.jpg";
 
 const ChatBody = ({ socket }: any) => {
   //listening the messages from socket server
   const [messages, setMessages] = useState([]);
-
   useEffect(() => {
     socket.on("messageResponse", (data: any) => setMessages([...messages, data]));
   }, [socket, messages]);
+
+  //typing
+  const [typingStatus, setTypingStatus] = useState("");
+  useEffect(() => {
+    socket.on("typingResponse", (data: any) => setTypingStatus(data));
+  }, [socket]);
 
   return (
     <div className="py-5">
       <div className="wrapper py-5">
         {/* Sender */}
-
         {messages.map((message) =>
           message.name === localStorage.getItem("userName") ? (
             <div className="d-flex flex-column  gap-2">
@@ -43,6 +47,8 @@ const ChatBody = ({ socket }: any) => {
           )
         )}
       </div>
+      {/* Typing status */}
+      <p>{typingStatus}</p>
     </div>
   );
 };

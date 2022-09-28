@@ -3,8 +3,9 @@ import { FiGithub } from "react-icons/fi";
 import { GrFacebookOption } from "react-icons/gr";
 import { AiFillEye, AiFillEyeInvisible, AiOutlineGoogle } from "react-icons/ai";
 import { useRouter } from "next/router";
+import { Socket } from "socket.io-client";
 
-function Login() {
+function Login({ socket }: any) {
   const router = useRouter();
   const [passwordType, setPasswordType] = useState("password");
   const [passwordInput, setPasswordInput] = useState("");
@@ -20,11 +21,13 @@ function Login() {
   };
 
   const [userName, setUserName] = useState("");
-  useEffect(() => {}, []);
+
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     localStorage.setItem("userName", userName);
+    //event that send every active user to the socket server
+    socket.emit("newUser", { userName, socketID: socket.id });
     router.push("/");
   };
 

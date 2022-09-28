@@ -50,10 +50,6 @@ body {
   background-color: var(--color-bg-card-white);
 }
 
-.cp {
-  cursor: pointer;
-}
-
 ::-webkit-scrollbar {
   width: 6px;
 }

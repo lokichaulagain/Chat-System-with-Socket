@@ -111,6 +111,7 @@ const ChatsComponent = () => {
             <div>
               <small style={{ fontSize: "12px" }} className="fw-semibold text-muted">
                 Last seen 6:30AM
+          
               </small>
             </div>
           </div>
