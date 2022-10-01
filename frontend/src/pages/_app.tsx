@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import type { AppProps } from "next/app";
@@ -13,7 +13,6 @@ const socket = io("http://localhost:5000");
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const location = router.pathname.split("/")[1];
- 
 
   return (
     <>

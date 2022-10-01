@@ -59,10 +59,10 @@ const checkPageStatus = (message: any, userName: any) => {
 };
 
 const ChatFooter = ({ socket }: any) => {
-  console.log(socket);
+
 
   const [message, setMessage] = useState("");
-  // console.log(message);
+
 
   // const checkPageStatus =(message, localStorage.getItem("userName"))=> {
   //   throw new Error("Function not implemented.");
